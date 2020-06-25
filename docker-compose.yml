@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  web:
+    container_name: "hello_world"
+    build:
+      context: .
+      dockerfile: src/hello_world/Dockerfile
+    ports:
+      - 5000:8080

@@ -1,0 +1,16 @@
+
+
+# Operating System
+.DS_Store
+
+# Project tools
+/.ionide
+
+.paket/
+paket-files/
+
+.fake/
+
+#Project files
+obj/
+bin/
