@@ -1,0 +1,6 @@
+version: '3.8'
+services:
+  web:
+    image: ${WEB_IMAGE}:latest
+    ports:
+      - 8888:8080

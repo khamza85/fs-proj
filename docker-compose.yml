@@ -1,9 +1,14 @@
 version: '3.8'
 services:
   web:
-    container_name: "hello_world"
     build:
       context: .
       dockerfile: src/hello_world/Dockerfile
+      args:
+        BUILDKIT_INLINE_CACHE: 1
+        progress: plain
+      cache_from:
+        - ${WEB_IMAGE}:latest
+    image: ${WEB_IMAGE}:latest
     ports:
       - 5000:8080
